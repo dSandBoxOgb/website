@@ -1,42 +1,53 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { JoinWaitlist } from "../features/WaitlistForm";
 
-const Navigation = () => {
+const Nav = () => {
   return (
-    <nav className="flex items-center justify-between  bg-gray-50 m-auto my-5 sticky top-5 z-50 p-6 rounded container">
-      <div className="flex items-center space-x-2">
-        <Image src="/logo.png" alt="dSandBox Logo" width={30} height={30} className="border" />
-        <span className="font-semibold text-lg">dSandBox</span>
-      </div>
+    <nav className="flex items-center  bg-gray-50  sticky top-0  p-6 shadow z-50 rounded">
+      <div className="container m-auto flex justify-between">
+        <div className="flex items-center space-x-2">
+          <Link href="/">
+            <Image
+              src="/logo-light.svg"
+              alt="dSandBox Logo"
+              width={30}
+              height={30}
+              className="border"
+            />
+          </Link>
 
-      <div className="hidden md:flex items-center space-x-8">
-        <Link href="/" className="text-gray-600 hover:text-gray-900">
-          Home
-        </Link>
-        <Link href="about" className="text-gray-600 hover:text-gray-900">
-          About Us
-        </Link>
-        <Link href="communities" className="text-gray-600 hover:text-gray-900">
-          Our Communities
-        </Link>
-        <Link href="events" className="text-gray-600 hover:text-gray-900">
-          Events
-        </Link>
-        <Link href="jobs" className="text-gray-600 hover:text-gray-900">
-          Jobs Board
-        </Link>
-        <Link href="contact" className="text-gray-600 hover:text-gray-900">
-          Contact Us
-        </Link>
-      </div>
+          <span className="font-semibold text-lg">dSandBox</span>
+        </div>
 
-      <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6">
-        Contact
-      </Button>
+        <div className="hidden md:flex items-center space-x-8">
+          <Link href="/" className="text-gray-600 hover:text-primary-200">
+            Home
+          </Link>
+          <Link href="about" className="text-gray-600 hover:text-primary-200">
+            About Us
+          </Link>
+          <Link
+            href="#"
+            className="text-gray-600 hover:text-primary-200"
+          >
+            Our Communities
+          </Link>
+          <Link href="#" className="text-gray-600 hover:text-primary-200">
+            Events
+          </Link>
+          <Link href="jobs" className="text-gray-600 hover:text-primary-200">
+            Jobs Board
+          </Link>
+          <Link href="contact" className="text-gray-600 hover:text-primary-200">
+            Contact Us
+          </Link>
+        </div>
+
+        <JoinWaitlist />
+      </div>
     </nav>
   );
 };
 
-export default Navigation;
+export default Nav;

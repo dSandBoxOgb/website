@@ -1,22 +1,13 @@
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import Navigation from "@/components/common/nav";
-import Footer from "@/components/common/footer";
 import Image from "next/image";
+import Hero from "@/components/common/Hero";
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-orange-500 mb-4">About Us</h1>
-        </div>
-
-        {/* About dSandBox Section */}
+    <>
+      <Hero title="About Us" />
+      <section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <div>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
@@ -160,10 +151,8 @@ const AboutUs = () => {
             </Card>
           </div>
         </div>
-      </div>
-
-      <Footer />
-    </div>
+      </section>
+    </>
   );
 };
 

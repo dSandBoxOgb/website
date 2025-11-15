@@ -1,20 +1,7 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import {
-  Star,
-  Users,
-  Palette,
-  Code,
-  Search,
-  Smartphone,
-  Globe,
-  ArrowRight,
-} from "lucide-react";
-import Navigation from "@/components/common/nav";
-import Footer from "@/components/common/footer";
+import { Palette } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -22,20 +9,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { JoinWaitlist } from "@/components/features/WaitlistForm";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-
-      {/* Hero Section */}
+    <>
       <section className="container mx-auto px-6 py-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             A{" "}
-            <span className="text-orange-500 relative">
-              Creative Playground
-              <div className="absolute -bottom-2 left-0 w-full h-2 bg-orange-200 opacity-50"></div>
+            <span className="text-transparent bg-clip-text bg-linear-to-r p-2 from-black to-black/10">
+              Creativity Playground
             </span>
             <br />
             For Designers
@@ -48,9 +32,11 @@ const HomePage = () => {
               thinkers and problem-solvers
             </p>
           </div>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg">
-            Get Started
-          </Button>
+
+          <div className="flex gap-5 justify-center">
+            <JoinWaitlist />
+            <Button variant="outline">Join Community</Button>
+          </div>
         </div>
 
         {/* Trusted by section */}
@@ -76,7 +62,7 @@ const HomePage = () => {
             <div>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 dSandBox, Ogbomoso is a design and innovation community built
-                exclusively for designers — a space where creativity,
+                exclusively for designers, a space where creativity,
                 collaboration, and growth come together.
               </p>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -91,12 +77,6 @@ const HomePage = () => {
                 designers.
               </p>
             </div>
-            <Button
-              variant="outline"
-              className="border-orange-500 text-orange-500 hover:bg-orange-50"
-            >
-              Learn More
-            </Button>
           </div>
         </div>
       </section>
@@ -104,7 +84,7 @@ const HomePage = () => {
       {/* Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center space-y-3 max-w-96 border m-auto mb-16">
+          <div className="text-center space-y-3 max-w-96 m-auto mb-16">
             <p>Lorem Ipsum</p>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Lorem ipsum dolor sit amet, consectetur
@@ -114,7 +94,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-black text-white">
               <CardContent className="p-8">
-                <Palette className="w-12 h-12 text-orange-500 mb-4" />
+                <Palette className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Design</h3>
                 <p className="text-gray-300">
                   Choose a plan and share your design project details with us:
@@ -125,7 +105,7 @@ const HomePage = () => {
 
             <Card className="bg-black text-white">
               <CardContent className="p-8">
-                <Palette className="w-12 h-12 text-orange-500 mb-4" />
+                <Palette className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Connect</h3>
                 <p className="text-gray-300">
                   Sit back and relax: our expert designers will turn your vision
@@ -151,7 +131,7 @@ const HomePage = () => {
       {/* Tools Section */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center space-y-3 max-w-96 border m-auto mb-16">
+          <div className="text-center space-y-3 max-w-96 m-auto mb-16">
             <p>Lorem Ipsum</p>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Lorem ipsum dolor sit amet, consectetur
@@ -174,7 +154,7 @@ const HomePage = () => {
       {/* Portfolio Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center space-y-3 max-w-96 border m-auto mb-16">
+          <div className="text-center space-y-3 max-w-96 m-auto mb-16">
             <p>dSandbox</p>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Check out Various Communities
@@ -226,40 +206,36 @@ const HomePage = () => {
 
       {/* Testimonials Section */}
       <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center space-y-3 max-w-96 border m-auto mb-16">
-            <p>dSandbox</p>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Testimonials From Our Communities
-            </h2>
+        <div className="text-center space-y-3 max-w-96 border m-auto mb-16">
+          <p>dSandbox</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Testimonials From Our Communities
+          </h2>
+        </div>
+        <div className="md:flex w-full border">
+          <div className="flex-1">
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"></p>
           </div>
-          <div className="flex w-full border">
-            <div className="flex-1">
-              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"></p>
-            </div>
-            <div className="flex-2 p-8">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index}>
-                      <div className="p-1">
-                        <Card>
-                          <CardContent className="flex h-64 items-center justify-center p-6">
-                            <span className="text-4xl font-semibold">
-                              {index + 1}
-                            </span>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <div className="relative float-end mr-16 mt-8 gap-3">
-                  <CarouselPrevious className="" />
-                  <CarouselNext className="" />
-                </div>
-              </Carousel>
-            </div>
+          <div className="flex-1">
+            <Carousel className="w-full order">
+              <CarouselContent>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      “Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
+                      abgelenkt wird, wenn er sich ein Layout ansieht. Der
+                      Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder
+                      weniger die normale Anordnung von Buchstaben darstellt und
+                      somit nach lesbarer Sprache aussieht.”
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="relative float-end mr-16 m-8 gap-3">
+                <CarouselPrevious className="" />
+                <CarouselNext className="" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
@@ -289,9 +265,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -3,6 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@theme {
+  --color-primary-100: #FFA500;
+  --color-primary-200: #FF8C00;
+  --color-primary-300: #F57C00;
+  --color-primary-400: #FF8000;
+  --color-primary-500: #FF4500
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -51,7 +60,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #FF8C00;
+
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -116,7 +126,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  section {
+    @apply container m-auto p-5
   }
 }

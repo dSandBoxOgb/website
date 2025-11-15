@@ -1,0 +1,75 @@
+import Hero from "@/components/common/Hero";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+
+import { Facebook, Instagram, TwitterIcon } from "lucide-react";
+
+const Contact = () => {
+  return (
+    <>
+      <Hero title="Contact Us" />
+      <section id="#contact" className="space-y-8 py-15">
+        <div className="flex items-center">
+          <div className="flex-1 space-y-3">
+            <p className="flex gap-1">
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.1563 0C8.14755 0 6.18393 0.59565 4.51374 1.71164C2.84356 2.82762 1.54181 4.41381 0.773103 6.26962C0.00440276 8.12545 -0.196727 10.1675 0.195153 12.1376C0.587043 14.1077 1.55432 15.9175 2.9747 17.3379C4.39508 18.7582 6.20475 19.7255 8.17485 20.1173C10.145 20.5092 12.1871 20.3081 14.0429 19.5394C15.8987 18.7706 17.4849 17.469 18.6009 15.7987C19.7169 14.1285 20.3126 12.1649 20.3126 10.1562C20.3097 7.46352 19.2388 4.88189 17.3347 2.97784C15.4307 1.07379 12.849 0.00284 10.1563 0ZM15.9327 8.53025L11.4258 10.4609L14.6612 14.3438C14.7938 14.503 14.8577 14.7085 14.8388 14.9149C14.82 15.1213 14.7199 15.3117 14.5606 15.4443C14.4013 15.5769 14.1959 15.6409 13.9895 15.622C13.7831 15.6032 13.5926 15.503 13.46 15.3438L10.1563 11.377L6.85059 15.3438C6.71798 15.503 6.52753 15.6032 6.32113 15.622C6.11473 15.6409 5.90929 15.5769 5.75 15.4443C5.59072 15.3117 5.49064 15.1213 5.47177 14.9149C5.45291 14.7085 5.51681 14.503 5.64942 14.3438L8.88675 10.4609L4.37989 8.53025C4.28265 8.49195 4.19409 8.43445 4.11946 8.36125C4.04484 8.28815 3.98565 8.20065 3.94541 8.10425C3.90518 8.00775 3.8847 7.90425 3.88521 7.79965C3.88572 7.69515 3.9072 7.5918 3.94837 7.49573C3.98955 7.39966 4.04958 7.31282 4.12492 7.24037C4.20025 7.16792 4.28936 7.11132 4.38697 7.07393C4.48458 7.03654 4.58869 7.01911 4.69315 7.02269C4.79762 7.02626 4.9003 7.05075 4.99512 7.09473L9.37505 8.97165V4.49219C9.37505 4.28499 9.45735 4.08627 9.60385 3.93976C9.75035 3.79325 9.94905 3.71094 10.1563 3.71094C10.3635 3.71094 10.5622 3.79325 10.7087 3.93976C10.8552 4.08627 10.9376 4.28499 10.9376 4.49219V8.97165L15.3174 7.09473C15.4123 7.05075 15.5149 7.02626 15.6194 7.02269C15.7239 7.01911 15.828 7.03654 15.9256 7.07393C16.0232 7.11132 16.1123 7.16792 16.1876 7.24037C16.263 7.31282 16.323 7.39966 16.3642 7.49573C16.4054 7.5918 16.4268 7.69515 16.4273 7.79965C16.4279 7.90425 16.4074 8.00775 16.3671 8.10425C16.3269 8.20065 16.2677 8.28815 16.1931 8.36125C16.1185 8.43445 16.0299 8.49195 15.9327 8.53025Z"
+                  fill="#FF8C00"
+                />
+              </svg>
+              dSandbox
+            </p>
+            <p className="text-md md:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r p-2 from-black to-black/10">
+              Get in touch with us. <br /> We&apos;re here to assist you.
+            </p>
+          </div>
+
+          <div className="flex-1">
+            <div className="flex flex-col mr-auto w-max float-end p-2 gap-3 space-y-3">
+              <Facebook className="bg-primary p-1 rounded-full size-6" />
+              <Instagram className="bg-primary p-1 rounded-full size-6" />
+              <TwitterIcon className="bg-primary p-1 rounded-full size-6" />
+            </div>
+          </div>
+        </div>
+
+        <form className="space-y-5">
+          <div className="md:flex gap-5 space-y-3">
+            <div className="w-full">
+              <label htmlFor="name">Your Name</label>
+              <Input
+                id="name"
+                className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none"
+              />
+            </div>
+            <div className="w-full">
+              <label htmlFor="email">Email Address</label>
+              <Input id="email" type="email" className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none" />
+            </div>
+            <div className="w-full">
+              <label htmlFor="phone">Phone Number</label>
+              <Input id="phone" className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none" />
+            </div>
+          </div>
+
+          <div className="w-full">
+            <label htmlFor="message">Message</label>
+            <Textarea id="message" className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none" />
+          </div>
+
+          <Button>Leave a Message</Button>
+        </form>
+      </section>
+    </>
+  );
+};
+
+export default Contact;
