@@ -129,9 +129,14 @@
 
   body {
     @apply bg-background text-foreground;
+
   }
 
   section {
     @apply container m-auto p-5
+  }
+
+  section[aria-label="Notifications alt+T"] {
+    padding: 0 !important;
   }
 }

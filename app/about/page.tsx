@@ -29,7 +29,7 @@ const AboutUs = () => {
                 From web design to digital marketing strategies, we offer
                 comprehensive services that help our clients succeed in the
                 digital landscape. Our approach is collaborative, ensuring that
-                every project reflects our client's vision and goals.
+                every project reflects our client&apos;s vision and goals.
               </p>
             </div>
           </div>

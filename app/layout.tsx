@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/common/nav";
 import Footer from "@/components/common/footer";
 import localFont from "next/font/local";
+import { Providers } from "./providers";
 
 export const fonts = localFont({
   src: [
@@ -30,10 +31,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fonts.className} antialiased`}>
-        <Nav />
-        {children}
-        <Footer />
+      <body className={`${fonts.className} `}>
+        <Providers>
+          <Nav />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

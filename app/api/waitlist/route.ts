@@ -1,23 +1,21 @@
-// import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import { supabase } from "@/lib/supabaseClient";
 
-// export async function POST(request: Request) {
-//   try {
-//     // const supabase = await createClient();
+export async function POST(req: Request) {
+  const { name, email } = await req.json();
 
-//     const body = await request.json();
-//     const { name, email } = body;
+  if (!name || !email) {
+    return NextResponse.json(
+      { error: "Name and Email required" },
+      { status: 400 }
+    );
+  }
 
-//     if (!name || !email)
-//       return NextResponse.json(
-//         { error: "Email and Name are required" },
-//         { status: 400 }
-//       );
+  const { error } = await supabase().from("waitlist").insert({ name, email });
 
-//     return NextResponse.json("", { status: 201 });
-//   } catch () {
-//     return NextResponse.json(
-//       { error: "Internal server error" },
-//       { status: 500 }
-//     );
-//   }
-// }
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 400 });
+  }
+
+  return NextResponse.json({ success: true });
+}

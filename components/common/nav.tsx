@@ -4,7 +4,7 @@ import { JoinWaitlist } from "../features/WaitlistForm";
 
 const Nav = () => {
   return (
-    <nav className="flex items-center  bg-gray-50  sticky top-0  p-6 shadow z-50 rounded">
+    <nav className="flex items-center  bg-gray-50  sticky top-0 border p-6 shadow z-50 rounded">
       <div className="container m-auto flex justify-between">
         <div className="flex items-center space-x-2">
           <Link href="/">
