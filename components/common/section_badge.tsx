@@ -1,4 +1,5 @@
 // import classNames from "classnames";
+import classNames from "classnames";
 import Image from "next/image";
 
 const SectionBadge = ({
@@ -10,11 +11,11 @@ const SectionBadge = ({
 }) => {
   return (
     <div
-      // className={classNames("mb-2 flex items-center gap-2", {
-      //   "justify-start": align === "left",
-      //   "justify-center": align === "center",
-      //   "justify-end": align === "right",
-      // })}
+      className={classNames("mb-2 flex items-center gap-2", {
+        "justify-start": align === "left",
+        "justify-center": align === "center",
+        "justify-end": align === "right",
+      })}
     >
       <Image
         src={"/badge-icon.png"}

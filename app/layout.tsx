@@ -1,8 +1,10 @@
+import Nav from "@/components/common/nav";
 import type { Metadata } from "next";
 import "./globals.css";
-import Nav from "@/components/common/nav";
-// import Footer from "@/components/common/footer";
+import { Providers } from "@/components/providers/providers";
+import { ThemeProvider } from "@/components/theme-provider";
 import localFont from "next/font/local";
+import Footer from "@/components/common/footer";
 // import { Providers } from "./providers";
 
 export const fonts = localFont({
@@ -18,9 +20,6 @@ export const fonts = localFont({
   ],
   variable: "--font-cabinet-grotesk",
 });
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import { Providers } from "@/components/providers/providers";
 // import classNames from "classnames";
 // import { CabinetGrotesk } from "@/components/ui/fonts";
 // import { ThemeProvider } from "@/components/providers/ThemeProvider";
@@ -40,23 +39,20 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <body className={`${fonts.className} `}>
+      <body className={`${fonts.className} overflow-x-hidden  `}>
+        <ThemeProvider   attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
         <Providers>
+          
           <Nav />
           {children}
           <Footer />
         </Providers>
+        </ThemeProvider>
       </body>
     </html>
     
   );
 }
-//     // <html lang="en">
-    //   <body className={`${fonts.className} `}>
-    //     <Providers>
-    //       <Nav />
-    //       {children}
-    //       <Footer />
-    //     </Providers>
-    //   </body>
-    // </html>

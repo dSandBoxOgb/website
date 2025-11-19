@@ -1,4 +1,5 @@
 import SectionBadge from "@/components/common/section_badge";
+import Image from "next/image";
 
 // components/features/home/TestimonialsSection.tsx
 export default function TestimonialsSection() {
@@ -19,10 +20,12 @@ export default function TestimonialsSection() {
               {/* Left: Large Avatar with Orange Background */}
               <div className="flex justify-center">
                 <div className="rounded-full bg-[#ff8c0009]">
-                  <img
+                  <Image
                     src="/Group.png"
                     alt="Alexander Gibson"
                     className="h-full w-full object-cover"
+                    width={80}
+                    height={80}
                   />
                 </div>
               </div>
@@ -46,11 +49,11 @@ export default function TestimonialsSection() {
 
                 {/* Testimonial Quote */}
                 <blockquote className="mb-8 text-lg leading-relaxed text-gray-300">
-                  "Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
+                  &ldquo;Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
                   abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
                   Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
                   normale Anordnung von Buchstaben darstellt und somit nach
-                  lesbarer Sprache aussieht."
+                  lesbarer Sprache aussieht.&ldquo;
                 </blockquote>
 
                 {/* Author Name */}

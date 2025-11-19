@@ -1,5 +1,6 @@
 // components/features/home/HowWeWork.tsx
 import SectionBadge from "@/components/common/section_badge";
+import Image from "next/image";
 
 export default function HowWeWork() {
   return (
@@ -49,10 +50,12 @@ export default function HowWeWork() {
                 className="rounded-xl border border-gray-800 bg-transparent p-8 text-left"
               >
                 {/* Icon Container */}
-                <img
+                <Image
                   src={img}
                   alt={`${title} Icon`}
                   className="/bg-black mb-6 h-20 w-20 rounded-full p-2"
+                  width={80}
+                  height={80}
                 />
 
                 <h3 className="mb-4 text-xl font-bold text-white">{title}</h3>

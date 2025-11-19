@@ -1,147 +1,3 @@
-// "use client";
-// import SectionBadge from "@/components/common/section_badge";
-// import Image from "next/image";
-// import { useEffect, useState } from "react";
-
-// export default function WhoWeAre() {
-//   const [activeSection, setActiveSection] = useState<
-//     "mantra" | "mission" | "vision" | null
-//   >(null);
-
-//   const sections = {
-//     mantra: {
-//       title: "Our Mantra",
-//       content: "Design! Connect!! Grow!!!",
-//       icon: "/connect.png",
-//     },
-//     mission: {
-//       title: "Mission Statement",
-//       content:
-//         "To empower and connect designers in Ogbomoso by creating a collaborative space for learning, experimentation, and professional growth through design-focused events, mentorship, and community building.",
-//       icon: "/connect.png",
-//     },
-//     vision: {
-//       title: "Vision Statement",
-//       content:
-//         "To establish Ogbomoso as a leading creative hub in Africa – where designers thrive, ideas flourish, and design from Ogbomoso shapes experiences across the world.",
-//       icon: "/connect.png",
-//     },
-//   };
-
-//   const [openKey, setOpenKey] = useState<keyof typeof sections | null>(null);
-
-//   useEffect(() => {
-//     function onKey(e: KeyboardEvent) {
-//       if (e.key === "Escape") setOpenKey(null);
-//     }
-//     window.addEventListener("keydown", onKey);
-//     return () => window.removeEventListener("keydown", onKey);
-//   }, []);
-
-//   return (
-//     <section >
-//       <div className="container mx-auto px-4">
-//         <div className="mx-auto max-w-6xl">
-//           <SectionBadge align="left" />
-//           <h2 className="subtitle mb-8 text-left">Who we are</h2>
-
-//           {/* Grid of cards similar to provided screenshot: 2 columns on md+, multiple rows */}
-//           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-//             {/* Render cards for each section. Duplicate first item if you want an even grid of 4. */}
-//             {Object.keys(sections).concat(Object.keys(sections)[0]).map((key, idx) => {
-//               // key may be 'mantra' | 'mission' | 'vision'
-//               const sKey = key as keyof typeof sections;
-//               const item = sections[sKey];
-//               return (
-//         <div
-//           key={idx}
-//           className="relative overflow-hidden rounded-3xl border border-gray-800 bg-black p-6 md:pr-44"
-//         >
-//                   <div className="mb-3 flex items-start gap-3">
-//                     <img
-//                       src={item.icon}
-//                       alt={item.title}
-//                       className="h-5 w-5 object-contain mt-1"
-//                     />
-//                     <button
-//                       type="button"
-//                       onClick={() => setOpenKey(sKey)}
-//                       className="font-semibold text-left"
-//                       aria-haspopup="dialog"
-//                       aria-expanded={openKey === sKey}
-//                     >
-//                       {item.title}
-//                     </button>
-//                   </div>
-
-//                   <p className="text-sm leading-relaxed text-gray-400">
-//                     {item.content}
-//                   </p>
-
-//                   {/* Decorative orange block: float to the right of the text (vertically centered).
-//                       Card has extra right padding on md+ so text doesn't overlap the block. */}
-//                   <button
-//                     type="button"
-//                     onClick={() => setOpenKey(sKey)}
-//                     className="absolute right-6 top-1/2 transform -translate-y-1/2 h-28 w-28 md:h-36 md:w-36 rounded-tl-2xl bg-[#FF8C00] shadow-lg transition-transform hover:scale-105 focus:scale-105"
-//                     aria-label={`Open ${item.title}`}
-//                   />
-//                 </div>
-//               );
-//             })}
-//           </div>
-//           {/* Modal: show larger visual when openKey is set */}
-//           {openKey && (
-//             <div
-//               role="dialog"
-//               aria-modal="true"
-//               className="fixed inset-0 z-50 flex items-center justify-center"
-//             >
-//               {/* overlay */}
-//               <div
-//                 className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-//                 onClick={() => setOpenKey(null)}
-//               />
-
-//               <div className="relative z-10 mx-4 w-full max-w-xl">
-//                 <div className="transform-gpu rounded-2xl bg-transparent p-6 text-white transition duration-300 ease-out"
-//                   style={{ willChange: "transform, opacity" }}>
-//                   <div className="flex items-start justify-between">
-//                     <h3 className="text-lg font-semibold">
-//                       {sections[openKey].title}
-//                     </h3>
-//                     <button
-//                       aria-label="Close"
-//                       onClick={() => setOpenKey(null)}
-//                       className="ml-4 rounded bg-white/5 px-3 py-1 text-sm"
-//                     >
-//                       Close
-//                     </button>
-//                   </div>
-
-//                   <div className="mt-4 flex w-full items-center justify-center">
-//                     {/* Prefer a large image if available; fallback to orange block */}
-//                     <div className="rounded-2xl overflow-hidden">
-//                       {/* Try loading a public image; if missing, show a styled orange panel */}
-//                       {/* <Image
-//                         src="/fff.png"
-//                         alt={sections[openKey].title}
-//                         width={600}
-//                         height={400}
-//                         className="object-cover"
-//                       /> */}
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           )}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 
 "use client";
 import SectionBadge from "@/components/common/section_badge";
@@ -149,10 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function WhoWeAre() {
-  const [activeSection, setActiveSection] = useState<
-    "mantra" | "mission" | "vision" | null
-  >(null);
-
   const sections = {
     mantra: {
       title: "Our Mantra",
@@ -215,10 +67,12 @@ export default function WhoWeAre() {
                   className="relative overflow-hidden rounded-3xl border border-gray-800 bg-black p-6 min-h-[200px]"
                 >
                   <div className="mb-3 flex items-start gap-3">
-                    <img
+                    <Image
                       src={item.icon}
                       alt={item.title}
                       className="h-5 w-5 object-contain mt-1"
+                      width={20}
+                      height={20}
                     />
                     <button
                       type="button"

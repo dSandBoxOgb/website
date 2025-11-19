@@ -1,10 +1,13 @@
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
 export default function CommunitiesHero() {
   return (
     <section className="">
       <div className="hero-section">
         {/* Header Section */}
         <div className="flex items-center justify-center">
-          <h1 className="subtitle to-white! relative mx-auto inline-block text-center">
+          <h1 className="subtitle dark:to-white!  relative mx-auto inline-block text-center">
             Our Communities
             <div
               className="absolute right-0 -bottom-4 left-0 h-5 w-full bg-cover bg-top-left bg-no-repeat"
@@ -23,10 +26,12 @@ export default function CommunitiesHero() {
             <div className="space-y-8">
               {/* dSandBox tagline */}
               <div className="mb-2 flex items-center gap-3">
-                <img
+                <Image
                   src="/badge-icon.png"
                   alt="dSandBox logo"
                   className="mr-2 h-4 w-4"
+                  width={16}
+                  height={16}
                 />
                 <span className="text-sm text-gray-400">dSandBox</span>
               </div>
@@ -36,23 +41,24 @@ export default function CommunitiesHero() {
               </h2>
 
               {/* Join Community Button */}
+              <Button>Join Our Global Community</Button>
               <button className="rounded-lg bg-[#FF8C00] px-8 py-4 text-lg font-semibold text-black transition-colors hover:bg-[#E67E00]">
                 Join Our Global Community
               </button>
             </div>
 
             {/* Right Column - Description */}
-            <div className="space-y-6 text-xl leading-relaxed text-gray-300">
+            <div className="space-y-6 text-xl leading-relaxed dark:text-gray-300 text-black">
               <p>
                 dSandBox exists so our creator community can come together and
-                learn. It's run by the community, for the community, and
+                learn. It&apos;s run by the community, for the community, and
                 everyone is welcome. Join us and make some new friends.
               </p>
 
               <p>
                 Connect and build with 85,000+ community members around the
-                world – whether you're new to Webflow or a seasoned designer;
-                there's a place for you.
+                world - whether you&apos;re new to Webflow or a seasoned designer;
+                there&apos;s a place for you.
               </p>
             </div>
           </div>

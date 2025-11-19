@@ -1,5 +1,5 @@
 import SectionBadge from "@/components/common/section_badge"
-import { Section } from "lucide-react"
+import Image from "next/image"
 
 export default function GlobalTeam() {
   const teamMembers = [
@@ -29,10 +29,12 @@ export default function GlobalTeam() {
             <div key={index} className="bg-black-900 rounded-lg border ">
               <div className="flex items-center justify-center pt-6">
                 <div className="h-28 w-28 rounded-full bg-[#FF8C00] overflow-hidden shadow-md">
-                  <img
+                  <Image
                     src={member.image ?? '/team-placeholder.jpg'}
                     alt={member.name}
                     className="w-full h-full object-cover"
+                    width={112}
+                    height={112}
                   />
                 </div>
               </div>

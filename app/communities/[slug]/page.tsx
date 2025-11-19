@@ -1,5 +1,6 @@
 import communities from "@/app/communities/community.json";
 import SectionBadge from "@/components/common/section_badge";
+import Image from "next/image";
 // Team Component (define this above your main component)
 function GlobalTeam() {
   const teamMembers = [
@@ -43,7 +44,7 @@ function GlobalTeam() {
           <div className="mb-8 text-center">
             <div className="mb-4 flex items-center justify-center">
               <div className="inline-flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FF8C00] font-bold text-black">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 font-bold text-black">
                   ✶
                 </span>
                 <span className="text-sm text-[#FF8C00]">Ibadan Community</span>
@@ -61,10 +62,12 @@ function GlobalTeam() {
                 className="overflow-hidden rounded-lg border border-gray-800 bg-[#0f0f0f] shadow-sm"
               >
                 <div className="h-48 w-full bg-gray-800">
-                  <img
+                  <Image
                     src={member.image ?? "/team-placeholder.jpg"}
                     alt={member.name}
                     className="h-full w-full object-cover"
+                    width={400}
+                    height={300}
                   />
                 </div>
 
@@ -115,10 +118,12 @@ function CommunityHighlights({
             >
               {/* Image Container */}
               <div className="mb-4 h-40 w-full overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-700">
-                <img
+                <Image
                   src={card.image}
                   alt={card.title}
                   className="h-full w-full object-cover"
+                  width={400}
+                  height={300}
                 />
               </div>
 
@@ -239,6 +244,7 @@ export default async function CommunityPreview({
         <div className="hero-section">
           {/* Header Section */}
           <div className="flex items-center justify-center">
+            {/* <TypographyH1/> */}
             <h1 className="subtitle relative mx-auto inline-block to-white! text-center">
               {community?.name}
               <div
@@ -276,9 +282,11 @@ export default async function CommunityPreview({
               {/* Right: Visual image */}
               <div className="flex justify-center md:justify-end">
                 <div className="relative">
-                  <img
-                    src={community?.full_image}
+                  <Image
+                    src={community?.full_image||""}
                     alt={`${community?.name} workspace`}
+                    width={400}
+                    height={300} 
                     className="h-full w-full object-cover"
                   />
                 </div>

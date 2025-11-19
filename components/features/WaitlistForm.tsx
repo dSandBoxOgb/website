@@ -46,9 +46,9 @@ export function JoinWaitlist() {
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={setIsOpen} >
       <DialogTrigger asChild>
-        <Button size="lg">Join Waitlist</Button>
+        <Button size="sm">Join Waitlist</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

@@ -2,7 +2,7 @@ import SectionBadge from "@/components/common/section_badge";
 
 export default function AboutSection() {
   return (
-    <section className="py-24 text-white">
+    <section className="py-24 text-white bg-black">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-7xl text-center">
           <SectionBadge />

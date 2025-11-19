@@ -1,4 +1,5 @@
 import SectionBadge from "@/components/common/section_badge";
+import Image from "next/image";
 
 export default function AboutHero() {
   return (
@@ -49,10 +50,13 @@ export default function AboutHero() {
           {/* Right Column - Image */}
           <div className="flex justify-center">
             <div className="w-full max-w-md">
-              <img
+              <Image
                 src="/Group 3.png"
                 alt="About dSandBox"
                 className="h-auto w-full rounded-xl"
+                width={400}
+                height={300}
+                
               />
             </div>
           </div>

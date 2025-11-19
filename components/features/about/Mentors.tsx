@@ -1,6 +1,7 @@
 
 
 import SectionBadge from "@/components/common/section_badge"
+import Image from "next/image"
 
 export default function Mentors() {
   const mentors = [
@@ -32,10 +33,12 @@ export default function Mentors() {
                 {/* Circular Profile Image */}
                 <div className="flex justify-center mb-6">
                   <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-700 hover:border-orange-500 transition-colors duration-300">
-                    <img
+                    <Image
                       src={mentor.image || '/team-placeholder.jpg'}
                       alt={mentor.name}
                       className="w-full h-full object-cover"
+                      width={128}
+                      height={128}
                     />
                   </div>
                 </div>
