@@ -17,6 +17,7 @@ export default function NewsletterSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    if (!email) return;
 
     subscribe({ email }, {
       onSuccess: () => {
