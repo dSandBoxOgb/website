@@ -1,7 +1,6 @@
 import SectionBadge from "@/components/common/section_badge";
 import Image from "next/image";
 
-// components/features/home/TestimonialsSection.tsx
 export default function TestimonialsSection() {
   return (
     <section className="py-20">
