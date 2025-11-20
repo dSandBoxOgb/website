@@ -1,29 +1,17 @@
+import Hero from "@/components/common/Hero";
 import SectionBadge from "@/components/common/section_badge";
 import Image from "next/image";
 
 export default function AboutHero() {
-  return (
+  return (<>
+    <Hero title="About Us" />
     <section className="">
-      <div className="hero-section">
-        {/* Header Section */}
-        <div className="flex items-center justify-center">
-          <h1 className="subtitle relative mx-auto inline-block text-center">
-            About Us
-            <div
-              className="absolute right-0 -bottom-4 left-0 h-5 w-full bg-cover bg-top-left bg-no-repeat"
-              style={{
-                backgroundImage: "url('hero-title-underline.png')",
-              }}
-            ></div>
-          </h1>
-        </div>
-      </div>
-      <div className="container mx-auto px-4 py-20">
+      <div className="mx-auto px-4 py-20">
         {/* Main Content with Text on Left and Image on Right */}
         <SectionBadge align="left" />
-        <div className="mb-20 grid items-center gap-12 md:grid-cols-2">
+        <div className="mb-20 grid justify-between items-center gap-12 md:grid-cols-2">
           {/* Left Column - Text Content */}
-          <div className="space-y-6 text-lg leading-relaxed text-gray-300">
+          <div className="space-y-6 text-lg  leading-relaxed ">
             <h2 className="subtitle text-left!">About dSandbox</h2>
             <p>
               dSandBox is a global design community ecosystem created to empower
@@ -49,19 +37,20 @@ export default function AboutHero() {
 
           {/* Right Column - Image */}
           <div className="flex justify-center">
-            <div className="w-full max-w-md">
+            <div className="w-full p-10">
               <Image
                 src="/Group 3.png"
                 alt="About dSandBox"
                 className="h-auto w-full rounded-xl"
                 width={400}
                 height={300}
-                
+
               />
             </div>
           </div>
         </div>
       </div>
     </section>
+  </>
   );
 }

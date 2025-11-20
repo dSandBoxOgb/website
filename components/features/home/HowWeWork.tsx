@@ -2,14 +2,12 @@
 import SectionBadge from "@/components/common/section_badge";
 import Image from "next/image";
 
+
 export default function HowWeWork() {
   return (
-    <section className="relative py-20 text-white">
+    <section className="relative py-20">
       {/* Section background image */}
-      <div
-        className="absolute top-20 -right-28 h-96 w-96 bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('hww_background_image.png')" }}
-      />
+      <Image alt="" height={300} width={300} src="/hww_background_image.png" className="absolute right-0 -z-10 size-40 md:size-80 top-18" />
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <SectionBadge />
@@ -19,7 +17,7 @@ export default function HowWeWork() {
 
           {/* Description Section */}
           <div className="mx-auto mb-16">
-            <p className="text-center text-lg leading-relaxed text-gray-400">
+            <p className="text-center max-w-4xl m-auto text-lg abs leading-relaxed text--400">
               dSandBox, Ogbomoso is a design and innovation community built
               exclusively for designers – a space where creativity,
               collaboration, and growth come together.
@@ -47,7 +45,7 @@ export default function HowWeWork() {
             ].map(({ img, title, desc }, index) => (
               <div
                 key={index}
-                className="rounded-xl border border-gray-800 bg-transparent p-8 text-left"
+                className="rounded-xl hover:scale-105 transition-transform cursor-pointer border border-gray-800 bg-transparent p-8 text-left"
               >
                 {/* Icon Container */}
                 <Image
@@ -58,8 +56,8 @@ export default function HowWeWork() {
                   height={80}
                 />
 
-                <h3 className="mb-4 text-xl font-bold text-white">{title}</h3>
-                <p className="text-base leading-relaxed text-gray-400">
+                <h3 className="mb-4 text-xl font-bold">{title}</h3>
+                <p className="text-base leading-relaxed ">
                   {desc}
                 </p>
               </div>

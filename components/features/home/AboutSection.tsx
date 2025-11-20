@@ -2,13 +2,13 @@ import SectionBadge from "@/components/common/section_badge";
 
 export default function AboutSection() {
   return (
-    <section className="py-24 text-white bg-black">
+    <section className="py-24 ">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-7xl text-center">
           <SectionBadge />
 
           <h2 className="subtitle">About dSandBox</h2>
-          <div className="space-y-8 text-lg leading-relaxed text-gray-300">
+          <div className="space-y-8 text-xl leading-relaxed">
             <p>
               dSandBox, Ogbomoso is a design and innovation community built
               exclusively for designers — a space where creativity,

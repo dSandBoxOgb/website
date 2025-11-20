@@ -1,75 +1,38 @@
 
-import { CabinetGrotesk } from "@/components/ui/fonts";
-import classNames from "classnames";
+
+import { JoinWaitlist } from "../WaitlistForm";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
 
   return (
     <>
-      {/* // 1. Set the main section to a dark background and ensure text defaults to white */}
-      <section
-        className="hero-section"
-      >
+      <section className="container mx-auto px-6 py-20">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            A{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-tr font-extrabold p-2 from-[#FF4D29] to-[#FFC107]">
+              Creativity Playground
+            </span>
+            <br />
+            For Designers
+          </h1>
 
-        {/* --- Hero Content --- */}
-        <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-4 text-center ">
-          <div className="w-full">
-            {/* Main Heading replaced by an image */}
-            <div className="mb-8 flex flex-col items-center justify-center">
-              <div className="relative">
-                <div
-                  className={classNames(
-                    CabinetGrotesk.className,
-                    "leading24 relative text-3xl font-bold md:text-5xl lg:text-8xl",
-                  )}
-                >
-                  A{" "}
-                  <span className="relative whitespace-nowrap text-gray-400 opacity-95">
-                    <div
-                      className="absolute top-[2%] -right-[0.05em] h-[0.25em] w-[0.25em] bg-contain bg-center bg-no-repeat"
-                      style={{ backgroundImage: "url('flower-hero.png')" }}
-                    ></div>
-                    Creativity Playground
-                    <div
-                      className="absolute right-0 -bottom-4 left-0 h-5 w-full bg-cover bg-top-left bg-no-repeat"
-                      style={{
-                        backgroundImage: "url('hero-title-underline.png')",
-                      }}
-                    ></div>
-                  </span>{" "}
-                  <br />
-                  <span className="mt-[0.5em] inline-block">For Designers</span>
-                </div>
-              </div>
-              {/* <img
-                src="/frame 9.png"
-                alt="A Creativity Playground For Designers"
-                className="hidden h-auto w-full max-w-xl"
-              /> */}
-            </div>
-
-            {/* Description */}
-            <p className="mx-auto mb-12 max-w-2xl text-xl leading-relaxed text-gray-300 ">
+          <div>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               dSandBox is a global design and innovation ecosystem built to
               empower designers through creativity, connection, and
-              collaboration. We&apos;re shaping the next generation of creative
+              collaboration. We’re shaping the next generation of creative
               thinkers and problem-solvers
             </p>
+          </div>
 
-            {/* CTA Buttons */}
-            <div className=" flex flex-col justify-center gap-4 sm:flex-row">
-              {/* Primary Button: Solid Dark Orange */}
-              <button className="bg-main-600 hover:bg-main-700 rounded-lg px-8 py-4 font-semibold text-white shadow-lg shadow-orange-900/30 transition-colors">
-                Try dSandBox App
-              </button>
-
-              {/* Secondary Button: Dark Border/Outline */}
-              <button className="border-main-600 text-main-600 rounded-lg border-2 px-8 py-4 font-semibold transition-colors hover:border-white hover:text-white">
-                Our Community
-              </button>
-            </div>
+          <div className="flex gap-5 mt-25 justify-center">
+            <JoinWaitlist />
+            <Button variant="outline">Join Community</Button>
           </div>
         </div>
+
       </section>
       {/* Logos Section */}
       <div className="bg-black py-12">

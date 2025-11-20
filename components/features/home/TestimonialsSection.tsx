@@ -4,7 +4,7 @@ import Image from "next/image";
 // components/features/home/TestimonialsSection.tsx
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 text-white">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           {/* Header Section */}
@@ -16,7 +16,7 @@ export default function TestimonialsSection() {
           </h2>
 
           <div className="relative">
-            <div className="grid grid-cols-3 items-center justify-between gap-12 md:flex-row">
+            <div className="grid md:grid-cols-2 items-center justify-between gap-12 md:flex-row">
               {/* Left: Large Avatar with Orange Background */}
               <div className="flex justify-center">
                 <div className="rounded-full bg-[#ff8c0009]">
@@ -24,14 +24,14 @@ export default function TestimonialsSection() {
                     src="/Group.png"
                     alt="Alexander Gibson"
                     className="h-full w-full object-cover"
-                    width={80}
-                    height={80}
+                    width={300}
+                    height={300}
                   />
                 </div>
               </div>
 
               {/* Right: Testimonial Content */}
-              <div className="col-span-2 flex-1">
+              <div className="flex-1">
                 {/* 6 Orange Stars */}
                 <div className="mb-6 flex items-center">
                   {[1, 2, 3, 4, 5, 6].map((star) => (
@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Testimonial Quote */}
-                <blockquote className="mb-8 text-lg leading-relaxed text-gray-300">
+                <blockquote className="mb-8 text-lg leading-relaxed">
                   &ldquo;Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
                   abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
                   Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
