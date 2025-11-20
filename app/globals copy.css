@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -52,6 +53,20 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme {
+  --color-main-50: #fffbec;
+  --color-main-100: #fff6d3;
+  --color-main-200: #ffeaa5;
+  --color-main-300: #ffd86d;
+  --color-main-400: #ffbb32;
+  --color-main-500: #ffa40a;
+  --color-main-600: #ff8c00;
+  --color-main-700: #cc6702;
+  --color-main-800: #a14f0b;
+  --color-main-900: #82420c;
+  --color-main-950: #462004;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -89,7 +104,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #111111;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -122,28 +137,38 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+
+
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    /* Fallback explicit properties instead of Tailwind `@apply` to avoid build-time CSS parsing issues */
+    border-color: var(--border);
+    outline-color: var(--ring);
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+
   }
 
-  section {
-    @apply container p-5 m-auto
-  }
+  /* section {
+    @apply container m-auto p-5;
+  } */
 
   section[aria-label="Notifications alt+T"] {
     padding: 0 !important;
   }
-
-  .subtitle {
-    @apply mb-6 bg-linear-to-r dark:from-white from-black to-gray-700/85 bg-clip-text text-center text-4xl leading-10 font-bold text-transparent md:text-5xl md:leading-20;
-  }
-
-  .hero-section {
-    @apply relative w-full overflow-hidden dark:bg-[url('/hero_background.png')] bg-cover bg-center bg-no-repeat pt-64 pb-24 text-white;
-  }
 }
+    /* background: var(--background);
+    color: var(--foreground);
+  } */
+/* } */
+
+.subtitle {
+  @apply mb-6 bg-linear-to-r from-white to-gray-700/85 bg-clip-text text-center text-5xl leading-10 font-bold text-transparent md:text-5xl md:leading-20;
+}
+
+.hero-section {
+  @apply relative w-full overflow-hidden bg-[url('/hero_background.png')] bg-cover bg-center bg-no-repeat pt-64 pb-24 text-white;
+}
+

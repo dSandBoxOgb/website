@@ -1,0 +1,139 @@
+[
+  {
+    "slug": "ogbomoso",
+    "name": "Ogbomoso",
+    "description": "Designers unite through shared passion for creativity and innovation, exchanging ideas that push boundaries. Together they critique, collaborate, and elevate each other's work beyond individual limitations.",
+    "content": "<p>dSandBox is a global design community ecosystem created to empower designers through creativity, connection, and collaboration.</p><br/><p>We bring designers together – from students to professionals - to learn, share ideas, and grow collectively through community events, workshops, and creative challenges.</p><br/><p>Starting from Ogbomoso, Nigeria, one of the fastest-rising tech and innovation hubs in the South-West, dSandBox is building local communities that connect to a larger global network of designers.</p>",
+    "image": "/ogbomoso.png",
+    "full_image": "/ogbomoso_full_image.png",
+    "comingSoon": false,
+    "events": [
+      {
+        "image": "/card.png",
+        "title": "Ogbomoso Design Fest",
+        "description": "Hands-on sessions with industry experts to sharpen your design skills and learn new techniques.",
+        "time": "10:00 AM - 4:00 PM",
+        "date": "August 15, 2024",
+        "location": "Tech Hub, Ogbomoso"
+      },
+      {
+        "image": "/card.png",
+        "title": "Ogbomoso Design Fest",
+        "description": "Get constructive feedback on your portfolio from experienced designers and hiring managers.",
+        "time": "11:00 AM - 3:00 PM",
+        "date": "September 10, 2024",
+        "location": "Creative Space, Ogbomoso"
+      },
+      {
+        "image": "/card.png",
+        "title": "Ogbomoso Design Fests",
+        "description": "Connect with fellow designers, developers, and creatives in your local community.",
+        "time": "5:00 PM - 8:00 PM",
+        "date": "October 5, 2024",
+        "location": "Downtown Cafe, Ogbomoso"
+      },
+      {
+        "image": "/card.png",
+        "title": "Ogbomoso Design Fest",
+        "description": "Work on real-world projects with team members and build your experience together.",
+        "time": "9:00 AM - 5:00 PM",
+        "date": "November 20, 2024",
+        "location": "Innovation Lab, Ogbomoso"
+      }
+    ]
+  },
+  {
+    "slug": "ibadan",
+    "name": "Ibadan",
+    "description": "Designers unite through shared passion for creativity and innovation, exchanging ideas that push boundaries. Together they critique, collaborate, and elevate each other's work beyond individual limitations.",
+    "content": "<p>dSandBox is a global design community ecosystem created to empower designers through creativity, connection, and collaboration.</p><br/><p>We bring designers together – from students to professionals - to learn, share ideas, and grow collectively through community events, workshops, and creative challenges.</p><br/><p>Starting from Ogbomoso, Nigeria, one of the fastest-rising tech and innovation hubs in the South-West, dSandBox is building local communities that connect to a larger global network of designers.</p>",
+    "image": "/ibadan.png",
+    "full_image": "/ibadan_full_image.png",
+    "comingSoon": false,
+    "events": [
+      {
+        "image": "/card.png",
+        "title": "Ibadan Design Meetup",
+        "description": "Hands-on sessions with industry experts to sharpen your design skills and learn new techniques.",
+        "time": "10:00 AM - 4:00 PM",
+        "date": "August 20, 2024",
+        "location": "Creative Hub, Ibadan"
+      },
+      {
+        "image": "/card.png",
+        "title": "Ibadan Design Workshop",
+        "description": "Get constructive feedback on your portfolio from experienced designers and hiring managers.",
+        "time": "11:00 AM - 3:00 PM",
+        "date": "September 15, 2024",
+        "location": "Design Studio, Ibadan"
+      },
+      {
+        "image": "/card.png",
+        "title": "Ibadan Creative Jam",
+        "description": "Connect with fellow designers, developers, and creatives in your local community.",
+        "time": "5:00 PM - 8:00 PM",
+        "date": "October 10, 2024",
+        "location": "Art Space, Ibadan"
+      },
+      {
+        "image": "/card.png",
+        "title": "Ibadan Design Sprint",
+        "description": "Work on real-world projects with team members and build your experience together.",
+        "time": "9:00 AM - 5:00 PM",
+        "date": "November 25, 2024",
+        "location": "Innovation Center, Ibadan"
+      }
+    ]
+  },
+  {
+    "slug": "port-harcourt",
+    "name": "Port-Harcourt",
+    "description": "Coming Soon!!",
+    "content": "<p>dSandBox is a global design community ecosystem created to empower designers through creativity, connection, and collaboration.</p><br/><p>We bring designers together – from students to professionals - to learn, share ideas, and grow collectively through community events, workshops, and creative challenges.</p><br/><p>Starting from Ogbomoso, Nigeria, one of the fastest-rising tech and innovation hubs in the South-West, dSandBox is building local communities that connect to a larger global network of designers.</p>",
+    "image": "/community-placeholder.png",
+    "full_image": "/portharcourt_full_image.png",
+    "comingSoon": true,
+    "events": [
+      {
+        "image": "/card.png",
+        "title": "Port-Harcourt Design Summit",
+        "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
+        "time": "TBA",
+        "date": "TBA",
+        "location": "TBA"
+      },
+      {
+        "image": "/card.png",
+        "title": "Port-Harcourt Creative Workshop",
+        "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
+        "time": "TBA",
+        "date": "TBA",
+        "location": "TBA"
+      },
+      {
+        "image": "/card.png",
+        "title": "Port-Harcourt Design Networking",
+        "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
+        "time": "TBA",
+        "date": "TBA",
+        "location": "TBA"
+      },
+      {
+        "image": "/card.png",
+        "title": "Port-Harcourt Innovation Challenge",
+        "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
+        "time": "TBA",
+        "date": "TBA",
+        "location": "TBA"
+      },
+      {
+        "image": "/card.png",
+        "title": "Port-Harcourt Design Expo",
+        "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
+        "time": "TBA",
+        "date": "TBA",
+        "location": "TBA"
+      }
+    ]
+  }
+]
