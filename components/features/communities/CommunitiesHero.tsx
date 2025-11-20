@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function CommunitiesHero() {
   return (
     <>
-      <Hero title="About Us" />
+      <Hero title="Our Communities" />
       <section className="">
 
         <div className="container mx-auto px-4 py-20">
