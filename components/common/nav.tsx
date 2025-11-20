@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JoinWaitlist } from "../features/WaitlistForm";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const PAGES = [{
   "href": "/",

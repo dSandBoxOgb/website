@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
                   {[1, 2, 3, 4, 5, 6].map((star) => (
                     <svg
                       key={star}
-                      className="mr-1 h-6 w-6 text-[#FF8C00]"
+                      className="mr-1 h-6 w-6 text-primary-200"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function TestimonialsSection() {
                   />
                 </svg>
               </button>
-              <button className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF8C00] text-white transition-colors hover:bg-[#E67E00]">
+              <button className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-200 text-white transition-colors hover:bg-[#E67E00]">
                 <svg
                   className="h-5 w-5"
                   fill="none"
