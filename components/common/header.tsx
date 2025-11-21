@@ -1,30 +1,29 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { JoinWaitlist } from "../features/WaitlistForm";
+import { JoinWaitlist } from "../features/waitlist/WaitlistForm";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const PAGES = [{
-  "href": "/",
-  "label": "Home"
+  href: "/",
+  label: "Home"
 }, {
-  "href": "/about",
-  "label": "About Us"
+  href: "/about",
+  label: "About Us"
 }, {
-  "href": "/communities",
-  "label": "Our Communities"
+  href: "/communities",
+  label: "Our Communities"
 }, {
-  "href": "/jobs",
-  "label": "Jobs Board"
+  href: "/jobs",
+  label: "Jobs Board"
 }, {
-  "href": "/contact",
-  "label": "Contact Us"
+  href: "/contact",
+  label: "Contact Us"
 }]
 
 const Nav = () => {
   const pathname = usePathname();
-  console.log("Current Pathname:", pathname);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

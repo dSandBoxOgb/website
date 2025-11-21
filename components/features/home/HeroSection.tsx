@@ -1,6 +1,6 @@
 
 
-import { JoinWaitlist } from "../WaitlistForm";
+import { JoinWaitlist } from "../waitlist/WaitlistForm";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {

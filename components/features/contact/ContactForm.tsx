@@ -4,11 +4,21 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
 import { contactAction } from './contact-action'
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
+import { toast } from 'sonner'
 
 const ContactForm = () => {
-    const [signupFormState, formAction, isPending] = useActionState(contactAction, {});
-    console.log(signupFormState)
+    const [formState, formAction, isPending] = useActionState(contactAction, {});
+    useEffect(() => {
+        if (!!formState?.success) {
+            toast.success("Message Sent Successfully");
+        }
+
+        if (formState?.error) {
+            toast.error(formState.error || "An error occurred");
+        }
+    }, [formState]);
+
     return (
         <form action={formAction} className="space-y-5">
             <div className="md:flex gap-5 space-y-3">
