@@ -4,15 +4,32 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { subscribe as subscribeFn } from '@/services/subscription'
+import { useMutation } from '@tanstack/react-query'
 import { useState } from 'react'
+import { toast } from 'sonner'
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState('')
+  const { mutate: subscribe, isPending } = useMutation({
+    mutationFn: subscribeFn,
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Subscribed with:', email)
-    setEmail('')
+    if (!email) return;
+
+    subscribe({ email }, {
+      onSuccess: () => {
+        setEmail('')
+        toast.success(
+          "Thank you for subscribing to our newsletter!"
+        );
+      },
+      onError: () => {
+        toast.error("Failed to subscribe. Please try again.");
+      },
+    });
   }
 
   return (
@@ -40,13 +57,14 @@ export default function NewsletterSection() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 px-6 py-4 h-10 bg-black border border-gray-700 text-white rounded-xl focus:outline-none focus:border-gray-500 placeholder-gray-500 text-lg"
+              className="h-12 bg-black text-white"
             />
             <Button
               type="submit"
               size="lg"
+              disabled={isPending}
             >
-              Subscribe
+              {isPending ? 'Subscribing...' : 'Subscribe'}
             </Button>
           </form>
         </div>

@@ -5,8 +5,8 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 ">
-      <div className="grid grid-cols-2 p-5 md:pt-15 md:grid-cols-5 gap-8 container m-auto">
-        <div className="col-span-2 space-y-3 p-5">
+      <div className="grid grid-cols-1 p-5 md:pt-15 md:grid-cols-5 gap-8 container m-auto">
+        <div className="md:col-span-2 space-y-3 p-5">
           <div className="flex gap-5 items-center">
             <MapPin className="size-5" />
             <p className="">
@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="py-3 text-center mt-2 bg-black text-white">
-        © dSandbox 2025. All Rights Reserved{" "}
+        © dSandbox 2025. All Rights Reserved
       </p>
     </footer>
   );
