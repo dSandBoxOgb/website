@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function HowWeWork() {
   return (
-    <section className="relative py-20">
-      {/* Section background image */}
+    <section className="relative">
       <Image alt="" height={300} width={300} src="/hww_background_image.png" className="absolute right-0 -z-10 size-40 md:size-80 top-18" />
-      <div className="container mx-auto px-4">
+
+      <div className="container mx-auto">
         <div className="mx-auto max-w-6xl">
           <SectionBadge />
 

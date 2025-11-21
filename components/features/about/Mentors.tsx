@@ -14,21 +14,21 @@ export default function Mentors() {
   ]
 
   return (
-    <section className="py-20 bg-[#111111] text-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-] ">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-6xl">
           {/* Header Section */}
           <div className="text-left mb-12">
             <SectionBadge align="center" />
-            <h2 className="subtitle mb-8 text-left">Our Mentors</h2>
+            <h2 className=" text-4xl font-bold mb-8 text-left">Our Mentors</h2>
           </div>
-          
+
           {/* Mentors Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {mentors.map((mentor, index) => (
-              <div 
-                key={index} 
-                className="bg-transparent rounded-lg p-6 text-center"
+              <div
+                key={index}
+                className="bg-transparent border hover:scale-105 transition-transform rounded-lg p-6 text-center"
               >
                 {/* Circular Profile Image */}
                 <div className="flex justify-center mb-6">
@@ -45,7 +45,7 @@ export default function Mentors() {
 
                 {/* Name and Role */}
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-white mb-2">{mentor.name}</h3>
+                  <h3 className="text-xl font-bold mb-2">{mentor.name}</h3>
                   <p className="text-gray-400 text-lg font-medium">{mentor.role}</p>
                 </div>
 

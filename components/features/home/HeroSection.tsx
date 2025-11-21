@@ -7,7 +7,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="container mx-auto px-6 py-20">
+      <section>
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             A{" "}
@@ -19,7 +19,7 @@ export default function HeroSection() {
           </h1>
 
           <div>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
               dSandBox is a global design and innovation ecosystem built to
               empower designers through creativity, connection, and
               collaboration. We’re shaping the next generation of creative
@@ -27,7 +27,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="flex gap-5 mt-25 justify-center">
+          <div className="flex gap-5 mt-10 justify-center">
             <JoinWaitlist />
             <Button variant="outline">Join Community</Button>
           </div>

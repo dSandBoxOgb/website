@@ -1,8 +1,8 @@
-import Nav from "@/components/common/nav";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers/providers";
 import localFont from "next/font/local";
+import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
 
 export const fonts = localFont({
@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fonts.className} overflow-x-hidden  `}>
         <Providers>
-          <Nav />
+          <Header />
           {children}
           <Footer />
         </Providers>

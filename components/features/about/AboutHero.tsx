@@ -6,11 +6,9 @@ export default function AboutHero() {
   return (<>
     <Hero title="About Us" />
     <section className="">
-      <div className="mx-auto px-4 py-20">
-        {/* Main Content with Text on Left and Image on Right */}
+      <div className="py-20">
         <SectionBadge align="left" />
         <div className="mb-20 grid justify-between items-center gap-12 md:grid-cols-2">
-          {/* Left Column - Text Content */}
           <div className="space-y-6 text-lg  leading-relaxed ">
             <h2 className="subtitle text-left!">About dSandbox</h2>
             <p>

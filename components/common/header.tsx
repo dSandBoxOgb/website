@@ -1,5 +1,4 @@
 "use client";
-import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { JoinWaitlist } from "../features/WaitlistForm";
@@ -25,6 +24,7 @@ const PAGES = [{
 
 const Nav = () => {
   const pathname = usePathname();
+  console.log("Current Pathname:", pathname);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -44,17 +44,16 @@ const Nav = () => {
       </div>
 
       {/* Desktop view */}
-      <div className="hidden items-center space-x-6 lg:flex">
+      <nav className="hidden items-center space-x-6 lg:flex">
         {
-          PAGES.map((item) => (
-            <Link key={item.href} href={item.href} className={classNames("", {
-              "text-main-600": item.href === pathname
-            })}>
-              {item.label}
-            </Link>
-          ))
+          PAGES.map((item) => (<Link key={item.href} href={item.href} className={` ${item.href == pathname && "text-primary"
+            }`}>
+            {item.label}
+          </Link>
+          )
+          )
         }
-      </div>
+      </nav>
       <div className="hidden md:block">
 
         <JoinWaitlist />
@@ -87,7 +86,8 @@ const Nav = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={classNames("block text-lg", { "text-main-600": item.href === pathname })}
+                className={`block text-lg ${item.href == pathname && "text-primary"
+                  }`}
               >
                 {item.label}
               </Link>

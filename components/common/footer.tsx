@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -7,11 +8,22 @@ const Footer = () => {
     <footer className="bg-gray-100 ">
       <div className="grid grid-cols-1 p-5 md:pt-15 md:grid-cols-5 gap-8 container m-auto">
         <div className="md:col-span-2 space-y-3 p-5">
+          <div className="flex items-center space-x-2 mb-8">
+            <Link href="/">
+              <Image
+                src="/logo-light.svg"
+                alt="dSandBox Logo"
+                width={30}
+                height={30}
+                className="border size-8 md:size-10"
+              />
+            </Link>
+            <span className="font-semibold text-lg md:text-2xl">dSandBox</span>
+          </div>
           <div className="flex gap-5 items-center">
             <MapPin className="size-5" />
             <p className="">
-              The Assembly, Beside Boon Hotel, <br /> Lautech, Ogbomoso, Oyo
-              state, Nigeria.
+              Ogbomoso, Oyo state, Nigeria.
             </p>
           </div>
           <div className="flex gap-5 items-center">
@@ -21,8 +33,8 @@ const Footer = () => {
           <div className="flex gap-5 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="18"
+              height="18  "
               fill="currentColor"
               className=""
               viewBox="0 0 16 16"
