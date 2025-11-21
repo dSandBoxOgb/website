@@ -92,7 +92,7 @@
     "content": "<p>dSandBox is a global design community ecosystem created to empower designers through creativity, connection, and collaboration.</p><br/><p>We bring designers together – from students to professionals - to learn, share ideas, and grow collectively through community events, workshops, and creative challenges.</p><br/><p>Starting from Ogbomoso, Nigeria, one of the fastest-rising tech and innovation hubs in the South-West, dSandBox is building local communities that connect to a larger global network of designers.</p>",
     "image": "/community-placeholder.png",
     "full_image": "/portharcourt_full_image.png",
-    "comingSoon": true,
+    "comingSoon": false,
     "events": [
       {
         "image": "/card.png",

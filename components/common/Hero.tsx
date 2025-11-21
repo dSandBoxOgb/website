@@ -8,7 +8,7 @@ const Hero = ({ title }: { title: string }) => {
             {title}
           </h1>
           <div className="m-auto">
-            <UnderIcon />
+            <Line />
           </div>
         </div>
       </div>
@@ -16,7 +16,7 @@ const Hero = ({ title }: { title: string }) => {
   );
 };
 
-const UnderIcon = () => {
+const Line = () => {
   return (
     <svg
       width="300"
