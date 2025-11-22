@@ -5,22 +5,32 @@ import { JoinWaitlist } from "../features/waitlist/WaitlistForm";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const PAGES = [{
-  href: "/",
-  label: "Home"
-}, {
-  href: "/about",
-  label: "About Us"
-}, {
-  href: "/communities",
-  label: "Our Communities"
-}, {
-  href: "/jobs",
-  label: "Jobs Board"
-}, {
-  href: "/contact",
-  label: "Contact Us"
-}]
+const PAGES = [
+  {
+    href: "/",
+    label: "Home"
+  },
+  {
+    href: "/about",
+    label: "About Us"
+  },
+  {
+    href: "/communities",
+    label: "Our Communities"
+
+  },
+  {
+    href: "/events",
+    label: "Events"
+  },
+  {
+    href: "/jobs",
+    label: "Jobs Board"
+  },
+  {
+    href: "/contact",
+    label: "Contact Us"
+  }]
 
 const Nav = () => {
   const pathname = usePathname();

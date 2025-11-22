@@ -1,38 +1,42 @@
-[
-  {
-    "slug": "ogbomoso",
+{
+  "ogbomosho": {
+    "slug": "ogbomosho",
     "name": "Ogbomoso",
     "description": "Designers unite through shared passion for creativity and innovation, exchanging ideas that push boundaries. Together they critique, collaborate, and elevate each other's work beyond individual limitations.",
     "content": "<p>dSandBox is a global design community ecosystem created to empower designers through creativity, connection, and collaboration.</p><br/><p>We bring designers together – from students to professionals - to learn, share ideas, and grow collectively through community events, workshops, and creative challenges.</p><br/><p>Starting from Ogbomoso, Nigeria, one of the fastest-rising tech and innovation hubs in the South-West, dSandBox is building local communities that connect to a larger global network of designers.</p>",
     "image": "/ogbomoso.png",
     "full_image": "/ogbomoso_full_image.png",
     "comingSoon": false,
-    "events": [
-      {
+    "events": {
+      "ogbomoso-design-fest": {
         "image": "/card.png",
+        "slug": "ogbomoso-design-fest",
         "title": "Ogbomoso Design Fest",
         "description": "Hands-on sessions with industry experts to sharpen your design skills and learn new techniques.",
         "time": "10:00 AM - 4:00 PM",
         "date": "August 15, 2024",
         "location": "Tech Hub, Ogbomoso"
       },
-      {
+      "ogbomoso-design-fest-2": {
         "image": "/card.png",
+        "slug": "ogbomoso-design-fest-2",
         "title": "Ogbomoso Design Fest",
         "description": "Get constructive feedback on your portfolio from experienced designers and hiring managers.",
         "time": "11:00 AM - 3:00 PM",
         "date": "September 10, 2024",
         "location": "Creative Space, Ogbomoso"
       },
-      {
+      "ogbomoso-design-fests": {
         "image": "/card.png",
+        "slug": "ogbomoso-design-fests",
         "title": "Ogbomoso Design Fests",
         "description": "Connect with fellow designers, developers, and creatives in your local community.",
         "time": "5:00 PM - 8:00 PM",
         "date": "October 5, 2024",
         "location": "Downtown Cafe, Ogbomoso"
       },
-      {
+      "ogbomoso-design-summit": {
+        "slug": "ogbomoso-design-summit",
         "image": "/card.png",
         "title": "Ogbomoso Design Fest",
         "description": "Work on real-world projects with team members and build your experience together.",
@@ -40,9 +44,9 @@
         "date": "November 20, 2024",
         "location": "Innovation Lab, Ogbomoso"
       }
-    ]
+    }
   },
-  {
+  "ibadan": {
     "slug": "ibadan",
     "name": "Ibadan",
     "description": "Designers unite through shared passion for creativity and innovation, exchanging ideas that push boundaries. Together they critique, collaborate, and elevate each other's work beyond individual limitations.",
@@ -50,42 +54,46 @@
     "image": "/ibadan.png",
     "full_image": "/ibadan_full_image.png",
     "comingSoon": false,
-    "events": [
-      {
+    "events": {
+      "ibadan-design-meetup": {
         "image": "/card.png",
+        "slug": "ibadan-design-meetup",
         "title": "Ibadan Design Meetup",
         "description": "Hands-on sessions with industry experts to sharpen your design skills and learn new techniques.",
         "time": "10:00 AM - 4:00 PM",
         "date": "August 20, 2024",
         "location": "Creative Hub, Ibadan"
       },
-      {
+      "ibadan-design-workshop": {
         "image": "/card.png",
+        "slug": "ibadan-design-workshop",
         "title": "Ibadan Design Workshop",
         "description": "Get constructive feedback on your portfolio from experienced designers and hiring managers.",
         "time": "11:00 AM - 3:00 PM",
         "date": "September 15, 2024",
         "location": "Design Studio, Ibadan"
       },
-      {
+      "ibadan-creative-jam": {
         "image": "/card.png",
+        "slug": "ibadan-creative-jam",
         "title": "Ibadan Creative Jam",
         "description": "Connect with fellow designers, developers, and creatives in your local community.",
         "time": "5:00 PM - 8:00 PM",
         "date": "October 10, 2024",
         "location": "Art Space, Ibadan"
       },
-      {
+      "ibadan-design-sprint": {
         "image": "/card.png",
+        "slug": "ibadan-design-sprint",
         "title": "Ibadan Design Sprint",
         "description": "Work on real-world projects with team members and build your experience together.",
         "time": "9:00 AM - 5:00 PM",
         "date": "November 25, 2024",
         "location": "Innovation Center, Ibadan"
       }
-    ]
+    }
   },
-  {
+  "port-harcourt": {
     "slug": "port-harcourt",
     "name": "Port-Harcourt",
     "description": "Coming Soon!!",
@@ -93,8 +101,9 @@
     "image": "/community-placeholder.png",
     "full_image": "/portharcourt_full_image.png",
     "comingSoon": false,
-    "events": [
-      {
+    "events": {
+      "port-harcourt-design-summit": {
+        "slug": "port-harcourt-design-summit",
         "image": "/card.png",
         "title": "Port-Harcourt Design Summit",
         "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
@@ -102,7 +111,8 @@
         "date": "TBA",
         "location": "TBA"
       },
-      {
+      "port-harcourt-creative-workshop": {
+        "slug": "port-harcourt-creative-workshop",
         "image": "/card.png",
         "title": "Port-Harcourt Creative Workshop",
         "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
@@ -110,7 +120,8 @@
         "date": "TBA",
         "location": "TBA"
       },
-      {
+      "port-harcourt-design-networking": {
+        "slug": "port-harcourt-design-networking",
         "image": "/card.png",
         "title": "Port-Harcourt Design Networking",
         "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
@@ -118,7 +129,8 @@
         "date": "TBA",
         "location": "TBA"
       },
-      {
+      "port-harcourt-innovation-challenge": {
+        "slug": "port-harcourt-innovation-challenge",
         "image": "/card.png",
         "title": "Port-Harcourt Innovation Challenge",
         "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
@@ -126,7 +138,8 @@
         "date": "TBA",
         "location": "TBA"
       },
-      {
+      "port-harcourt-design-expo": {
+        "slug": "port-harcourt-design-expo",
         "image": "/card.png",
         "title": "Port-Harcourt Design Expo",
         "description": "Details coming soon. Stay tuned for updates on our exciting events in Port-Harcourt!",
@@ -134,6 +147,6 @@
         "date": "TBA",
         "location": "TBA"
       }
-    ]
+    }
   }
-]
+}

@@ -5,19 +5,20 @@ import Link from "next/link";
 
 export default function ExploreCommunities() {
   return (
-    <section className="py-20 text-white">
+    <section className="py-20">
       <div className="mb-12 text-center">
         <SectionBadge />
         <h2 className="subtitle">Explore Our Communities</h2>
       </div>
 
       <div className="mx-auto grid h-full max-w-6xl grid-cols-1 items-stretch justify-center gap-8 md:grid-cols-3">
-        {communities.map((c) => (
+        {Object.values(communities).map((c) => (
           <Link
             key={c.slug}
             href={c.comingSoon ? "#" : `/communities/${c.slug}`}
-            className={`group relative block transform rounded-lg shadow-lg transition-all duration-200 hover:scale-[1.01] ${c.comingSoon ? "opacity-60" : ""
-              }`}
+            className={`group relative block transform rounded-lg shadow-lg transition-all duration-200 hover:scale-[1.01] ${
+              c.comingSoon ? "opacity-60" : ""
+            }`}
             aria-disabled={c.comingSoon}
           >
             {c.comingSoon && (
@@ -47,10 +48,11 @@ export default function ExploreCommunities() {
 
                 <div className="flex">
                   <span
-                    className={`inline-block rounded-md px-4 py-2 text-sm font-medium ${c.comingSoon
-                      ? "cursor-not-allowed bg-gray-700 text-gray-300"
-                      : "bg-[#FF8C00] text-black hover:brightness-95"
-                      }`}
+                    className={`inline-block rounded-md px-4 py-2 text-sm font-medium ${
+                      c.comingSoon
+                        ? "cursor-not-allowed bg-gray-700 text-gray-300"
+                        : "bg-[#FF8C00] text-black hover:brightness-95"
+                    }`}
                   >
                     {c.comingSoon ? "Coming Soon" : "View Community"}
                   </span>

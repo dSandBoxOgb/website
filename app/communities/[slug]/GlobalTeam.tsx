@@ -1,8 +1,6 @@
-
-import SectionBadge from "@/components/common/section_badge";
 import Image from "next/image";
-// Team Component (define this above your main component)
-function GlobalTeam() {
+
+export function GlobalTeam() {
   const teamMembers = [
     {
       name: "Lorem Upsum",
@@ -47,7 +45,9 @@ function GlobalTeam() {
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 font-bold text-black">
                   ✶
                 </span>
-                <span className="text-sm text-primary-200">Ibadan Community</span>
+                <span className="text-sm text-primary-200">
+                  Ibadan Community
+                </span>
               </div>
             </div>
             <h2 className="text-4xl font-bold text-gray-300 md:text-5xl">

@@ -1,12 +1,9 @@
-
 import Hero from "@/components/common/Hero";
 import ContactForm from "@/components/features/contact/ContactForm";
 
 import { Facebook, Instagram, TwitterIcon } from "lucide-react";
 
 const Contact = () => {
-
-
   return (
     <>
       <Hero title="Contact Us" />
