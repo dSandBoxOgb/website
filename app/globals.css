@@ -132,7 +132,7 @@
   }
 
   section {
-    @apply container p-5 m-auto
+    @apply container p-5 py-20 m-auto max-w-6xl
   }
 
   section[aria-label="Notifications alt+T"] {

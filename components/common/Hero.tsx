@@ -1,22 +1,22 @@
 
 const Hero = ({ title }: { title: string }) => {
   return (
-    <header className="bg-[url('/assets/hero-background.png')] mt-16 bg-black bg-cover bg-no-repeat bg-left md:bg-center md:h-  h-50 md:h-90 w-full flex flex-col justify-center">
+    <div className="bg-[url('/assets/hero-background.png')] mt-16 bg-black bg-cover bg-no-repeat bg-left md:bg-center md:h-  h-50 md:h-90 w-full flex flex-col justify-center">
       <div className="container mx-auto px-5">
         <div className="flex flex-col gap-4 text-white mb-10 w-full">
           <h1 className="text-4xl text-center md:text-6xl font-bold">
             {title}
           </h1>
           <div className="m-auto">
-            <UnderIcon />
+            <Line />
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
-const UnderIcon = () => {
+const Line = () => {
   return (
     <svg
       width="300"

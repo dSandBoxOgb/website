@@ -48,7 +48,7 @@ export function JoinWaitlist() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen} >
       <DialogTrigger asChild>
-        <Button className="bg-primary dark:bg-red-500 border">Join Waitlist</Button>
+        <Button className="bg-primary dark:bg-red-500 border">Try dSandBox</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

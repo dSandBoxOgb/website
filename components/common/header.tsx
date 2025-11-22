@@ -1,27 +1,36 @@
 "use client";
-import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { JoinWaitlist } from "../features/WaitlistForm";
+import { JoinWaitlist } from "../features/waitlist/WaitlistForm";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const PAGES = [{
-  "href": "/",
-  "label": "Home"
-}, {
-  "href": "/about",
-  "label": "About Us"
-}, {
-  "href": "/communities",
-  "label": "Our Communities"
-}, {
-  "href": "/jobs",
-  "label": "Jobs Board"
-}, {
-  "href": "/contact",
-  "label": "Contact Us"
-}]
+const PAGES = [
+  {
+    href: "/",
+    label: "Home",
+  },
+  {
+    href: "/about",
+    label: "About Us",
+  },
+  {
+    href: "/communities",
+    label: "Our Communities",
+  },
+  {
+    href: "/events",
+    label: "Events",
+  },
+  {
+    href: "/jobs",
+    label: "Jobs Board",
+  },
+  {
+    href: "/contact",
+    label: "Contact Us",
+  },
+];
 
 const Nav = () => {
   const pathname = usePathname();
@@ -29,7 +38,6 @@ const Nav = () => {
 
   return (
     <header className="border sticky top-8 bg-white flex p-5 justify-between rounded-md shadow z-50 mx-6 md:mx-16 m-auto">
-
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image
@@ -44,19 +52,18 @@ const Nav = () => {
       </div>
 
       {/* Desktop view */}
-      <div className="hidden items-center space-x-6 lg:flex">
-        {
-          PAGES.map((item) => (
-            <Link key={item.href} href={item.href} className={classNames("", {
-              "text-main-600": item.href === pathname
-            })}>
-              {item.label}
-            </Link>
-          ))
-        }
-      </div>
+      <nav className="hidden items-center space-x-6 lg:flex">
+        {PAGES.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={` ${item.href == pathname && "text-primary"}`}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
       <div className="hidden md:block">
-
         <JoinWaitlist />
       </div>
 
@@ -66,7 +73,12 @@ const Nav = () => {
           <div className="flex items-center justify-between p-4 border-b">
             <div className="flex items-center space-x-2">
               <Link href="/">
-                <Image src="/logo-light.svg" alt="dSandBox Logo" width={30} height={30} />
+                <Image
+                  src="/logo-light.svg"
+                  alt="dSandBox Logo"
+                  width={30}
+                  height={30}
+                />
               </Link>
               <span className="font-semibold text-lg">dSandBox</span>
             </div>
@@ -75,8 +87,20 @@ const Nav = () => {
               aria-label="Close menu"
               className="p-2 rounded focus:outline-none"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18M6 6L18 18" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="#000"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </button>
           </div>
@@ -87,19 +111,23 @@ const Nav = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={classNames("block text-lg", { "text-main-600": item.href === pathname })}
+                className={`block text-lg ${
+                  item.href == pathname && "text-primary"
+                }`}
               >
                 {item.label}
               </Link>
             ))}
+            <JoinWaitlist />
           </nav>
         </div>
       )}
 
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className={`size-8 md:hidden rounded text-pink focus:outline-none ${isMenuOpen && "ring-2 ring-yellow-500"
-          }`}
+        className={`size-8 md:hidden rounded text-pink focus:outline-none ${
+          isMenuOpen && "ring-2 ring-yellow-500"
+        }`}
       >
         <svg
           viewBox="0 0 24 24"

@@ -1,7 +1,5 @@
 import Hero from "@/components/common/Hero";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import ContactForm from "@/components/features/contact/ContactForm";
 
 import { Facebook, Instagram, TwitterIcon } from "lucide-react";
 
@@ -41,32 +39,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="space-y-5">
-          <div className="md:flex gap-5 space-y-3">
-            <div className="w-full">
-              <label htmlFor="name">Your Name</label>
-              <Input
-                id="name"
-                className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none"
-              />
-            </div>
-            <div className="w-full">
-              <label htmlFor="email">Email Address</label>
-              <Input id="email" type="email" className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none" />
-            </div>
-            <div className="w-full">
-              <label htmlFor="phone">Phone Number</label>
-              <Input id="phone" className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none" />
-            </div>
-          </div>
-
-          <div className="w-full">
-            <label htmlFor="message">Message</label>
-            <Textarea id="message" className="shadow-none border-0 border-b border-b-gray-300 rounded-none px-0 focus-visible:border-b-primary focus-visible:ring-0 focus-visible:outline-none" />
-          </div>
-
-          <Button>Leave a Message</Button>
-        </form>
+        <ContactForm />
       </section>
     </>
   );

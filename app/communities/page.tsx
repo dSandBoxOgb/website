@@ -1,5 +1,5 @@
-import CommunitiesHero from '@/components/features/communities/CommunitiesHero'
-import ExploreCommunities from '@/components/features/communities/ExploreCommunities'
+import CommunitiesHero from "@/components/features/communities/CommunitiesHero";
+import ExploreCommunities from "@/components/features/communities/ExploreCommunities";
 
 export default function CommunitiesPage() {
   return (
@@ -7,5 +7,5 @@ export default function CommunitiesPage() {
       <CommunitiesHero />
       <ExploreCommunities />
     </main>
-  )
+  );
 }

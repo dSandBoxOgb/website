@@ -3,13 +3,11 @@ import Image from "next/image";
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
+    <section>
+      <div className="container mx-auto">
         <div className="mx-auto max-w-6xl">
-          {/* Header Section */}
           <SectionBadge />
 
-          {/* Main Title */}
           <h2 className="subtitle">
             Testimonials From Our Communities Members
           </h2>
@@ -47,7 +45,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Testimonial Quote */}
-                <blockquote className="mb-8 text-lg leading-relaxed">
+                <blockquote className="mb-8 text-lg text-justify leading-relaxed">
                   &ldquo;Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
                   abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
                   Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
@@ -62,7 +60,7 @@ export default function TestimonialsSection() {
               </div>
             </div>
             {/* Navigation Arrows */}
-            <div className="absolute right-12 bottom-12 flex space-x-4">
+            <div className="absolute right-12 bottom-8   flex space-x-4">
               <button className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-600 bg-transparent text-gray-400 transition-colors hover:border-gray-400">
                 <svg
                   className="h-5 w-5"
