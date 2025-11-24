@@ -46,11 +46,10 @@ export default function TestimonialsSection() {
 
                 {/* Testimonial Quote */}
                 <blockquote className="mb-8 text-lg text-justify leading-relaxed">
-                  &ldquo;Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
-                  abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
-                  Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
-                  normale Anordnung von Buchstaben darstellt und somit nach
-                  lesbarer Sprache aussieht.&ldquo;
+                  &quot;dSandBox has been a game changer for my growth. The
+                  community pushed me to be consistent, try new things, and
+                  refine my design process. I’ve met amazing designers, joined
+                  real projects, and finally feel like my work is being seen.”
                 </blockquote>
 
                 {/* Author Name */}

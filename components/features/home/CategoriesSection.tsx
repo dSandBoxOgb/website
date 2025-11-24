@@ -11,26 +11,31 @@ export default function CategoriesSection() {
     { name: "Shopify Designers" },
     { name: "Webflow Designers" },
     { name: "Framer Designers" },
+    { name: "Motion GX Designers" },
   ];
 
   return (
-    <section className="bg-[#111111] !container-none max-w-full text-white">
+    <section className="">
       <div className="mx-auto max-w-6xl">
         <SectionBadge />
 
-        <h3 className="text-center text-4xl my-5 font-bold">Categories Of Designers</h3>
+        <h3 className="text-center text-4xl my-5 font-bold">
+          Categories Of Designers
+        </h3>
 
-        <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed text-gray-400">
-          dSandBox, Ogbomoso is a design and innovation community built
-          exclusively for designers – a space where creativity, collaboration,
-          and growth come together.
+        <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed ">
+          dSandBox is a design and innovation community built exclusively for
+          designers – a space where creativity, collaboration, and growth come
+          together.
         </p>
 
-        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="mx-auto grid max-w-4xl justify-center items-center grid-cols-2 gap-4 md:grid-cols-3">
           {categories.map((category, index) => (
             <div
               key={index}
-              className={`group flex cursor-pointer items-center justify-center space-x-3 rounded-2xl border-2 py-2.5 px-8 ${index == categories.length - 1 && "order-2 col-start-2"}`}
+              className={`group flex cursor-pointer items-center justify-center space-x-3 rounded-2xl border-2 border-primary-200 hover:scale-105 transition-transform py-2.5 px-5 ${
+                index == categories.length - 1 && "order-2 col-start-2"
+              }`}
             >
               <svg
                 width={32}
@@ -48,7 +53,7 @@ export default function CategoriesSection() {
                   fill="#727272"
                 />
               </svg>
-              <span className={`font-medium text-gray-400 transition-colors`}>
+              <span className={`font-medium  transition-colors`}>
                 {category.name}
               </span>
             </div>

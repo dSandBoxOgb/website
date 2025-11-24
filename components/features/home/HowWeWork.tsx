@@ -2,12 +2,9 @@
 import SectionBadge from "@/components/common/section_badge";
 import Image from "next/image";
 
-
 export default function HowWeWork() {
   return (
     <section className="relative">
-      <Image alt="" height={300} width={300} src="/hww_background_image.png" className="absolute right-0 -z-10 size-40 md:size-80 top-18" />
-
       <div className="container mx-auto">
         <div className="mx-auto max-w-6xl">
           <SectionBadge />
@@ -18,9 +15,9 @@ export default function HowWeWork() {
           {/* Description Section */}
           <div className="mx-auto mb-16">
             <p className="text-center max-w-4xl m-auto text-lg abs leading-relaxed text--400">
-              dSandBox, Ogbomoso is a design and innovation community built
-              exclusively for designers – a space where creativity,
-              collaboration, and growth come together.
+              dSandBox is a design and innovation community built exclusively
+              for designers – a space where creativity, collaboration, and
+              growth come together.
             </p>
           </div>
 
@@ -45,7 +42,7 @@ export default function HowWeWork() {
             ].map(({ img, title, desc }, index) => (
               <div
                 key={index}
-                className="rounded-xl hover:scale-105 transition-transform cursor-pointer border border-gray-800 bg-transparent p-8 text-left"
+                className="rounded-xl hover:scale-105 transition-transform cursor-pointer border border-primary-200 bg-transparent p-8 text-left"
               >
                 {/* Icon Container */}
                 <Image
@@ -57,9 +54,7 @@ export default function HowWeWork() {
                 />
 
                 <h3 className="mb-4 text-xl font-bold">{title}</h3>
-                <p className="text-base leading-relaxed ">
-                  {desc}
-                </p>
+                <p className="text-base leading-relaxed ">{desc}</p>
               </div>
             ))}
           </div>

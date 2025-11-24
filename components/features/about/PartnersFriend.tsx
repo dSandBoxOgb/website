@@ -1,4 +1,3 @@
-
 import SectionBadge from "@/components/common/section_badge";
 import Image from "next/image";
 
@@ -12,35 +11,31 @@ export default function PartnersFriend() {
   ];
 
   return (
-    <section className="bg-[#111111]  max-w-full text-white">
+    <section className="">
       <div className="container max-w-6xl m-auto">
-
         <div className="text-left mb-16">
           <SectionBadge align="center" />
-          <h2 className="text-4xl font-bold mb-8 text-left">Our Partners & Friends</h2>
+          <h2 className="subtitle">Our Partners & Friends</h2>
         </div>
 
         <div className="space-y-8">
-          {Array.from({ length: 5 }, (_, rowIndex) => (
-            <div
-              key={`row-${rowIndex}`}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-center"
-            >
-              {partners.map((src, idx) => (
-                <div key={`row${rowIndex}-${idx}`} className="flex items-center justify-center p-4 group">
-                  <div className="relative flex items-center justify-center w-full h-20">
-                    <Image
-                      src={src}
-                      alt={`partner-${idx + 1}`}
-                      width={140}
-                      height={60}
-                      className="max-w-[120px] h-auto filter grayscale brightness-100 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          ))}
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-20">
+            {[
+              "beacon-labs-logo.png",
+              "oluseun-onigbede-logo.png",
+              "blockchain-lautech-logo.png",
+              "o3-finance-logo.svg",
+              "jt-connect-logo.svg",
+            ].map((logo, index) => (
+              <Image
+                key={index}
+                src={`/home/${logo}`}
+                alt={logo}
+                width={150}
+                height={40}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

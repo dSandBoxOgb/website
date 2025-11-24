@@ -9,15 +9,15 @@ export default function AboutSection() {
         <h2 className="subtitle">About dSandBox</h2>
         <div className="space-y-8 text-xl leading-relaxed">
           <p>
-            dSandBox, Ogbomoso is a design and innovation community built
-            exclusively for designers — a space where creativity,
-            collaboration, and growth come together.
+            dSandBox is a design and innovation community built exclusively for
+            designers — a space where creativity, collaboration, and growth come
+            together.
           </p>
 
           <p>
             We provide a sandbox for designers to learn, experiment, and build
-            meaningful experiences through workshops, design meetups,
-            portfolio reviews, and collaborative design challenges.
+            meaningful experiences through workshops, design meetups, portfolio
+            reviews, and collaborative design challenges.
           </p>
 
           <p>

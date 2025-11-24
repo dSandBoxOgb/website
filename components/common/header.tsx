@@ -30,6 +30,14 @@ const PAGES = [
     href: "/contact",
     label: "Contact Us",
   },
+  {
+    href: "https://learn.dsandbox.space",
+    label: "Learn",
+  },
+  {
+    href: "https://learn.dsandbox.space/blog",
+    label: "Blog",
+  },
 ];
 
 const Nav = () => {
@@ -43,12 +51,11 @@ const Nav = () => {
           <Image
             src="/logo-light.svg"
             alt="dSandBox Logo"
-            width={30}
-            height={30}
-            className="border size-5 md:size-10"
+            width={100}
+            height={100}
+            className="w-32 "
           />
         </Link>
-        <span className="font-semibold text-lg">dSandBox</span>
       </div>
 
       {/* Desktop view */}

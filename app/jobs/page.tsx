@@ -2,6 +2,16 @@ import Hero from "@/components/common/Hero";
 import { Input } from "@/components/ui/input";
 import JobCard from "./JobCard";
 
+const JOBS = [
+  {
+    company: "Beacon Labs & Tech Solutions",
+    title: "Intern Product Designer",
+    salary: "Free Internship",
+    location: "Nigeria",
+    // title: "Intern Product Designer"
+  },
+];
+
 const Jobs = () => {
   return (
     <>
@@ -12,8 +22,8 @@ const Jobs = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <JobCard key={index} />
+          {JOBS.map((job) => (
+            <JobCard key={job.title} job={job} />
           ))}
         </div>
       </section>
