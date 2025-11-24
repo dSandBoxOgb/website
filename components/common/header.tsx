@@ -83,11 +83,11 @@ const Nav = () => {
                 <Image
                   src="/logo-light.svg"
                   alt="dSandBox Logo"
-                  width={30}
-                  height={30}
+                  width={100}
+                  height={100}
+                  className="w-32 "
                 />
               </Link>
-              <span className="font-semibold text-lg">dSandBox</span>
             </div>
             <button
               onClick={() => setIsMenuOpen(false)}
