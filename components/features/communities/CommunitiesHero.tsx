@@ -1,13 +1,13 @@
 import Hero from "@/components/common/Hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CommunitiesHero() {
   return (
     <>
       <Hero title="Our Communities" />
       <section className="">
-
         {/* Main Content */}
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
@@ -30,8 +30,11 @@ export default function CommunitiesHero() {
               </h2>
 
               {/* Join Community Button */}
-              <Button size="lg">Join Our Global Community</Button>
-
+              <Button asChild size="lg">
+                <Link href="https://chat.whatsapp.com/IOlMEOJ078j32sSzKlsQQw?mode=wwt">
+                  Join Our Global Community
+                </Link>
+              </Button>
             </div>
 
             {/* Right Column - Description */}
@@ -43,9 +46,9 @@ export default function CommunitiesHero() {
               </p>
 
               <p>
-                Connect and build with 85,000+ community members around the
-                world - whether you&apos;re new to Webflow or a seasoned designer;
-                there&apos;s a place for you.
+                Connect and design with community members around the world -
+                whether you&apos;re new or a seasoned designer; there&apos;s a
+                place for you.
               </p>
             </div>
           </div>

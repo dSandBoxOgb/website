@@ -44,7 +44,7 @@ const EventCard = ({
       </div>
       <Button asChild className="mt-4 w-full">
         <a
-          href={`/events/${communityName}/${event.slug}` || "#"}
+          href={`${event.slug}` || "#"}
           aria-label={`More info about ${event.title}`}
         >
           More Info

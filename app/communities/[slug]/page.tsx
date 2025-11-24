@@ -32,7 +32,7 @@ export default async function CommunityPreview({
                 {community?.name}
               </h1>
               <div
-                dangerouslySetInnerHTML={{ __html: community?.content || "" }}
+              // dangerouslySetInnerHTML={{ __html: community?.content || "" }}
               />
 
               <Button asChild>

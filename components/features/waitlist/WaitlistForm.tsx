@@ -46,9 +46,11 @@ export function JoinWaitlist() {
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen} >
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button className="bg-primary dark:bg-red-500 border">Try dSandBox</Button>
+        <Button className="bg-primary dark:bg-red-500 border">
+          Try dSandBox App
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

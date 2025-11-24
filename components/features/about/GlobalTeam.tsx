@@ -1,35 +1,56 @@
-import SectionBadge from "@/components/common/section_badge"
-import Image from "next/image"
+import SectionBadge from "@/components/common/section_badge";
+import Image from "next/image";
 
 export default function GlobalTeam() {
   const teamMembers = [
-    { name: "Thelma Opurum", role: "Founder", image: '/Ellipse 1.png' },
-    { name: "Daniel Onaolapo", role: "Lead Creative Director", image: '/Ellipse 1.png' },
-    { name: "Kelvin Ajayi", role: "Lead Developer", image: '/Ellipse 1.png' },
-    { name: "El-Ameen Falana", role: "Community Lead", image: '/Ellipse 1.png' },
-    { name: "Blessing Bamidele", role: "Operations Lead", image: '/Ellipse 1.png' },
-    { name: "Blessing Bamidele", role: "Operations Lead", image: '/Ellipse 1.png' },
-  ]
+    { name: "Thelma Opurum", role: "Founder", image: "/about/team-thelma.jpg" },
+    {
+      name: "Daniel Onaolapo",
+      role: "Lead Creative Director",
+      image: "/about/daniel.jpg",
+    },
+    {
+      name: "Kelvin Ajayi",
+      role: "Lead Developer",
+      image: "/about/kelvin.jpg",
+    },
+    {
+      name: "Blessing Bamidele",
+      role: "Operations Lead",
+      image: "/about/blessing.jpg",
+    },
+    // {
+    //   name: "El-Ameen Falana",
+    //   role: "Community Lead 1",
+    //   image: "/Ellipse 1.png",
+    // },
+    // {
+    //   name: "Funmilayo Oreoluwa",
+    //   role: "Community Lead 2",
+    //   image: "/Ellipse 1.png",
+    // },
+  ];
 
   return (
     // Section: Dark background and white text
     <section>
       <div className="text-center">
         <div className="inline-flex items-center justify-center gap-3">
-
           <SectionBadge align="left" />
         </div>
       </div>
-      <h2 className="subtitle mb-8 text-start">Our Global Team</h2>
+      <h2 className="subtitle">Our Global Team</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamMembers.map((member, index) => (
-
-          <div key={index} className="bg-black-900 hover:scale-105 transition-all rounded-lg border ">
+          <div
+            key={index}
+            className="bg-black-900 hover:scale-105 transition-all rounded-lg border "
+          >
             <div className="flex items-center justify-center pt-6">
               <div className="h-28 w-28 rounded-full bg-primary-200 overflow-hidden shadow-md">
                 <Image
-                  src={member.image ?? '/team-placeholder.jpg'}
+                  src={member.image ?? "/team-placeholder.jpg"}
                   alt={member.name}
                   className="w-full h-full object-cover"
                   width={112}
@@ -45,8 +66,6 @@ export default function GlobalTeam() {
           </div>
         ))}
       </div>
-
     </section>
-  )
+  );
 }
-

@@ -1,7 +1,8 @@
 import Hero from "@/components/common/Hero";
 import ContactForm from "@/components/features/contact/ContactForm";
 
-import { Facebook, Instagram, TwitterIcon } from "lucide-react";
+import { Facebook, Instagram, Linkedin, TwitterIcon } from "lucide-react";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -32,9 +33,34 @@ const Contact = () => {
 
           <div className="flex-1">
             <div className="flex flex-col mr-auto w-max float-end p-2 gap-3 space-y-3">
-              <Facebook className="bg-primary p-1 rounded-full size-6" />
-              <Instagram className="bg-primary p-1 rounded-full size-6" />
-              <TwitterIcon className="bg-primary p-1 rounded-full size-6" />
+              <Link href="https://instagram.com/dsandbox_hq">
+                <Instagram className="bg-primary p-1 rounded-full size-6" />
+              </Link>
+              <Link href="https://linkedin.com/company/dsandbox">
+                <Linkedin className="bg-primary p-1 rounded-full size-6" />
+              </Link>
+              <Link href="https://x.com/dsandbox_hq">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="bg-primary p-1 rounded-full size-6"
+                >
+                  <g clip-path="url(#clip0_417_2614)">
+                    <path
+                      d="M0.076 0H3.61L6.755 4.498L10.53 0H11.659L7.185 5.114L12 12H8.468L5.183 7.303L1.128 12H0L4.753 6.688L0.076 0Z"
+                      fill="#1A1A1A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_417_2614">
+                      <rect width="12" height="12" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
