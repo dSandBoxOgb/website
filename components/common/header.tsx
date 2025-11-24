@@ -59,7 +59,7 @@ const Nav = () => {
       </div>
 
       {/* Desktop view */}
-      <nav className="hidden items-center space-x-6 lg:flex">
+      <nav className="hidden items-center space-x-6 xl:flex">
         {PAGES.map((item) => (
           <Link
             key={item.href}
@@ -70,9 +70,6 @@ const Nav = () => {
           </Link>
         ))}
       </nav>
-      <div className="hidden md:block">
-        <JoinWaitlist />
-      </div>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
@@ -129,30 +126,34 @@ const Nav = () => {
           </nav>
         </div>
       )}
-
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className={`size-8 md:hidden rounded text-pink focus:outline-none ${
-          isMenuOpen && "ring-2 ring-yellow-500"
-        }`}
-      >
-        <svg
-          viewBox="0 0 24 24"
-          // fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className=""
+      <div className="flex space-x-5">
+        <div className="hidden md:block">
+          <JoinWaitlist />
+        </div>
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={`size-8 lg:hidden rounded text-pink focus:outline-none ${
+            isMenuOpen && "ring-2 ring-yellow-500"
+          }`}
         >
-          <g id="Menu / Menu_Alt_01">
-            <path
-              id="Vector"
-              d="M12 17H19M5 12H19M5 7H19"
-              stroke="#000000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </g>
-        </svg>
-      </button>
+          <svg
+            viewBox="0 0 24 24"
+            // fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className=""
+          >
+            <g id="Menu / Menu_Alt_01">
+              <path
+                id="Vector"
+                d="M12 17H19M5 12H19M5 7H19"
+                stroke="#000000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
     </header>
   );
 };

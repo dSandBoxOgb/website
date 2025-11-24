@@ -21,7 +21,7 @@ export default function HeroSection() {
               height={10}
               src="/home/hero-flower.png"
               alt="A Creativity Playground For Designers"
-              className="= max-w-xl  absolute size-6 -top-2 right-18 mt-1 md:right-32 animate animate-spin duration-1000"
+              className="= max-w-xl  absolute size-6 -top-2 right-18 mt-1 md:right-32 sm:right-12 animate animate-spin duration-1000"
             />
 
             <Image
