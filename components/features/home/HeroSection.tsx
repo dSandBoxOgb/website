@@ -21,12 +21,12 @@ export default function HeroSection() {
               height={10}
               src="/home/hero-flower.png"
               alt="A Creativity Playground For Designers"
-              className="= max-w-xl  absolute size-6 -top-2 right-18 mt-1 md:right-32 sm:right-12 animate animate-spin duration-1000"
+              className="= max-w-xl  absolute size-6 -top-2 right-18 mt-1 md:right-32 sm:right-12 animate animate-spin animation-duration-[3s]"
             />
 
             <Image
-              width={800}
-              height={800}
+              width={500}
+              height={16}
               src="/hero-line.png"
               alt="A Creativity Playground For Designers"
               className=" h-auto max-w-60 md:max-w-xl absolute top-16 left-1/2 -translate-x-2/5 -translate-y-1/2 -z-10"
