@@ -52,8 +52,8 @@ const Nav = () => {
             src="/logo-light.svg"
             alt="dSandBox Logo"
             width={100}
-            height={100}
-            className="w-32 "
+            height={30}
+            className=""
           />
         </Link>
       </div>
@@ -81,8 +81,8 @@ const Nav = () => {
                   src="/logo-light.svg"
                   alt="dSandBox Logo"
                   width={100}
-                  height={100}
-                  className="w-32 "
+                  height={30}
+                  className=""
                 />
               </Link>
             </div>
